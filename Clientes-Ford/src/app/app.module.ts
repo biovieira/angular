@@ -11,7 +11,7 @@ import { VeiculoComponent } from './veiculo/veiculo.component';
     AppComponent,
     CabecalhoComponent,
     ClienteComponent,
-    VeiculoComponent
+    VeiculoComponent,
   ],
   imports: [
     BrowserModule

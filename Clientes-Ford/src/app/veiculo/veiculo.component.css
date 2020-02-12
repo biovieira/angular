@@ -1,0 +1,78 @@
+body {
+	text-align: center;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+form#frmstylizer {
+	margin: auto;
+	width: 750px;	
+	text-align: left;
+}
+
+fieldset {
+	margin: 0;
+	padding: 10px;
+	border: 0;
+	clear: left;
+}
+
+form br {
+	clear: left;
+}
+
+legend,
+label {
+	color: #696969;
+}
+
+fieldset fieldset {
+	padding: 0;
+}
+
+label {
+	display: block;
+	margin: 0 10px 0 0;
+	padding: 0 0 12px 0;
+	line-height: 1.2em;
+	float: left;
+}
+
+
+label.full {
+	width: 720px;
+}
+
+label.x-large {
+	width: 536px;
+}
+
+label.large { 
+	width: 355px;
+}
+
+
+label.small { 
+	width: 172px;
+}
+
+label.x-small {
+	width: 81px;
+}
+
+.textfield,
+.select,
+.text {
+	border: 1px solid #f00;
+	background-color: #fafafa;
+	display: block;
+	width: 100%;
+}
+
+.button {
+	width: 100%;
+	color: #696969; 
+}
