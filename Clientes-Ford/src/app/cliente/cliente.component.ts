@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import  {Http} from '@angular/http';
+import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-cliente',
@@ -8,7 +10,7 @@ import  {Http} from '@angular/http';
 })
 export class ClienteComponent implements OnInit {
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {  
   }
@@ -22,6 +24,9 @@ export class ClienteComponent implements OnInit {
         var validacep = /^[0-9]{8}$/;
         //Valida o formato do CEP.
         if(validacep.test(cep)) {
+          this.http.get(`https://viacep.com.br/ws/${cep}/json`)
+            map(dados => dados);
+        }
     }
   } 
 }
