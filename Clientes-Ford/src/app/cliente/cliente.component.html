@@ -10,14 +10,14 @@
      <label class="normal">Telefone 2 &#42; <input type="text" class="textfield" /></label>
      <label class="small">CEP &#42; <input type="text" class="text" id="cep" name="cep" required (blur)="consultaCEP($event.target.value)" /></label>
       
-     <label class="large">Rua &#42; <input type="text" class="textfield" /></label>
-     <label class="large">Bairro &#42; <input type="text" class="textfield" /></label><br />
+     <label class="large">Rua &#42; <input type="text" class="textfield" id="rua"/></label>
+     <label class="large">Bairro &#42; <input type="text" class="textfield" id="bairro"/></label><br />
      
-     <label class="small">Cidade &#42; <input type="text" class="textfield" /></label>
-     <label class="x-small">Número &#42; <input type="text" class="textfield" /></label>
-     <label class="large">Complemento &#42; <input type="text" class="textfield" /></label>
+     <label class="small">Cidade &#42; <input type="text" class="textfield" id="cidade"/></label>
+     <label class="x-small">Número &#42; <input type="text" class="textfield" id="numero"/></label>
+     <label class="large">Complemento &#42; <input type="text" class="textfield" id="complemento"/></label>
      <label class="x-small">Estado &#42; 
-       <select class="select">
+       <select class="select" id="estado">
         <option value="RJ">RJ</option>
         <option value="SP">SP</option>
         <option value="MG">MG</option>
