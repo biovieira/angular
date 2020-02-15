@@ -1,61 +1,64 @@
+{{ profileForm || json }}
+Teste
+<form id="frmstylizer" action="#" method="post">
+  <fieldset>
+    <h2>Cliente</h2>
 
- <form id="frmstylizer" action="#" method="post">
-    <fieldset>
-     <h2>Cliente</h2>
-     
-     <label class="x-large">Nome &#42; <input type="text" class="textfield" /></label>
-     <label class="small">Nascimento &#42; <input type="date" class="textfield" /></label>   
-           
-     <label class="normal">Telefone 1 &#42; <input type="text" class="textfield" /></label>
-     <label class="normal">Telefone 2 &#42; <input type="text" class="textfield" /></label>
-     <label class="small">CEP &#42; <input type="text" class="text" id="cep" name="cep" required (blur)="consultaCEP($event.target.value)" /></label>
-      
-     <label class="large">Rua &#42; <input type="text" class="textfield" id="rua"/></label>
-     <label class="large">Bairro &#42; <input type="text" class="textfield" id="bairro"/></label><br />
-     
-     <label class="small">Cidade &#42; <input type="text" class="textfield" id="cidade"/></label>
-     <label class="x-small">Número &#42; <input type="text" class="textfield" id="numero"/></label>
-     <label class="large">Complemento &#42; <input type="text" class="textfield" id="complemento"/></label>
-     <label class="x-small">Estado &#42; 
-       <select class="select" id="estado">
+    <label class="x-large" for="nome">Nome</label>
+    <input
+      type="text"
+      class="textfield"
+      id="nome"
+      [(ngModel)]="profileForm.firstName"
+    />
+
+    <label class="small"
+      >Nascimento &#42; <input type="date" class="textfield"
+    /></label>
+
+    <label class="normal"
+      >Telefone 1 &#42; <input type="text" class="textfield"
+    /></label>
+    <label class="normal"
+      >Telefone 2 &#42; <input type="text" class="textfield"
+    /></label>
+
+    <label class="small" for="cep">CEP</label>
+    <input
+      type="text"
+      class="text"
+      id="cep"
+      required
+      [(ngModel)]="profileForm.address.zip"
+      (blur)="consultaCEP($event)"
+    />
+
+    <label class="large"
+      >Rua &#42; <input type="text" class="textfield" id="rua"
+    /></label>
+    <label class="large"
+      >Bairro &#42; <input type="text" class="textfield" id="bairro"/></label
+    ><br />
+
+    <label class="small"
+      >Cidade &#42; <input type="text" class="textfield" id="cidade"
+    /></label>
+    <label class="x-small"
+      >Número &#42; <input type="text" class="textfield" id="numero"
+    /></label>
+    <label class="large"
+      >Complemento &#42; <input type="text" class="textfield" id="complemento"
+    /></label>
+    <label class="x-small"
+      >Estado &#42;
+      <select class="select" id="estado">
         <option value="RJ">RJ</option>
         <option value="SP">SP</option>
         <option value="MG">MG</option>
-        <option value="ES">ES</option>	  
-       </select>
-      </label><br />
-         
+        <option value="ES">ES</option>
+      </select> 
+      </label>
+  </fieldset>
+</form>
 
-    </fieldset>
-    
-    </form>
-
-
-
-<!--   
-<div>
-    <section class="grid">
-        <div class="coluna">
-            <div class="item">Nome:<input size="50"></div>
-            <div class="item">Data de Nascimento:<input type="date"></div>
-        </div>
-        <div class="coluna">
-            <div class="item">Email:<input size="30" type="email"></div>
-            <div class="item">Telefone 1:<input size="2">-<input size="10" type="tel"></div>
-            <div class="item">Telefone 2:<input size="2">-<input size="10" type="tel"></div>
-        </div>
-        <div class="coluna">
-            <div class="item">Rua:<input size="40"></div>
-            <div class="item">Numero:<input size="10"></div>
-            <div class="item">Complemento:<input></div>
-        </div>
-        <div class="coluna">            
-            <div class="item">Bairro:<input ></div>
-            <div class="item">Cidade:<input ></div>
-            <div class="item">Estado:<input size="10"></div>
-            <div class="item">CEP:<input></div>
-        </div>
-    </section>
-
-</div>
--->
+{{ profileForm || json }}

@@ -1,0 +1,101 @@
+
+    <mat-card class="cartao" >
+      <mat-card-header>
+        <mat-card-title>Dados do cliente</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            name="name"
+            [(ngModel)]="profileForm.name"
+            placeholder="Digite seu nome"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Data de Nascimento</mat-label>
+          <input
+            type="date"
+            matInput
+            name="born"
+            [(ngModel)]="profileForm.date"
+            placeholder="dd/mm/aaaa"
+            required
+          />
+        </mat-form-field>
+
+        <br />
+
+        <mat-form-field>
+          <mat-label>Rua</mat-label>
+          <input
+            matInput
+            name="street"
+            [(ngModel)]="profileForm.address.street"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Numero</mat-label>
+          <input matInput name="number" 
+          [(ngModel)]="profileForm.number" 
+          required
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Complemento</mat-label>
+          <input matInput name="compl" [(ngModel)]="profileForm.compl" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Bairro</mat-label>
+          <input
+            matInput
+            name="neighbour"
+            [(ngModel)]="profileForm.address.neighbour"
+            required
+          />
+        </mat-form-field>
+
+        <br />
+
+        <mat-form-field>
+          <mat-label>Cidade</mat-label>
+          <input matInput name="city" 
+          [(ngModel)]="profileForm.address.city" 
+          required
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Estado</mat-label>
+          <input
+            matInput
+            name="state"
+            [(ngModel)]="profileForm.address.state"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Cep</mat-label>
+          <input
+            matInput
+            name="zip"
+            [(ngModel)]="profileForm.address.zip"
+            (blur)="cep($event)"
+            required
+            pattern="\d{5}-?\d{3}"
+            placeholder="00000-000"
+          />
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+
+

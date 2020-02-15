@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { VeiculoComponent } from './veiculo/veiculo.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { VeiculoComponent } from './veiculo/veiculo.component';
     VeiculoComponent,
   ],
   imports: [
-    BrowserModule
+    FormsModule,
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
